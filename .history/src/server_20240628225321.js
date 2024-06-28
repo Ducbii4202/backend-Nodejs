@@ -3,8 +3,8 @@ const path = require("path");
 require("dotenv").config();
 
 const app = express();
-const port = process.env.PORT || 8081; //port => hardcode
-const hostname = process.env.HOST_NAME;
+const port = 8080;
+const hostname = "localhost";
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
