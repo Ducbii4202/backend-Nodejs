@@ -1,5 +1,6 @@
 require("dotenv").config();
-const express = require("express"); // commonjs
+const express = require("express");
+const path = require("path");
 const configViewEngine = require("./config/viewEngine.js");
 const webRouter = require("./routes/web.js");
 
@@ -11,7 +12,6 @@ const hostname = process.env.HOST_NAME;
 configViewEngine(app);
 
 // Khai bao route
-app.use("/test", webRouter);
 
 app.listen(port, hostname, () => {
   console.log(`Example app listening on port ${port}`);
