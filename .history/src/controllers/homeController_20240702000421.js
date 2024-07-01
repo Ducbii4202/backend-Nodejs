@@ -11,7 +11,7 @@ const postCreateUser = async (req, res) => {
   // let name = req.body.name;
   // let city = req.body.city;
 
-  let { email, name, city } = req.body;
+  // let { email, name, city } = req.body;
 
   // connection.query(
   //   `  INSERT INTO

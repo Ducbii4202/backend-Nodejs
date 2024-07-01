@@ -6,7 +6,7 @@ const getHomePage = (req, res) => {
 const getHoiDanIt = (req, res) => {
   res.render("sample.ejs");
 };
-const postCreateUser = async (req, res) => {
+const postCreateUser = (req, res) => {
   // let email = req.body.email;
   // let name = req.body.name;
   // let city = req.body.city;
@@ -24,11 +24,7 @@ const postCreateUser = async (req, res) => {
   //   }
   // );
 
-  let [results, fields] = await connection.query(
-    `  INSERT INTO Users (email, name, city) VALUES (?,?,?)`,
-    [email, name, city]
-  );
-  res.send("Create User succeed !");
+  const [result, fields] = connection.query("select * from Users u");
 };
 
 const getCreatePage = (req, res) => {

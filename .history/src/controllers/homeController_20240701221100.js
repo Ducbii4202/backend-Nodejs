@@ -6,29 +6,23 @@ const getHomePage = (req, res) => {
 const getHoiDanIt = (req, res) => {
   res.render("sample.ejs");
 };
-const postCreateUser = async (req, res) => {
+const postCreateUser = (req, res) => {
   // let email = req.body.email;
   // let name = req.body.name;
   // let city = req.body.city;
 
   let { email, name, city } = req.body;
 
-  // connection.query(
-  //   `  INSERT INTO
-  //   Users (email, name, city)
-  //  VALUES (?,?,?)`,
-  //   [email, name, city],
-  //   function (results) {
-  //     console.log(results);
-  //     res.send("Create User success !");
-  //   }
-  // );
-
-  let [results, fields] = await connection.query(
-    `  INSERT INTO Users (email, name, city) VALUES (?,?,?)`,
-    [email, name, city]
+  connection.query(
+    `  INSERT INTO
+    Users (email, name, city)
+   VALUES (?,?,?)`,
+    [email, name, city],
+    function (results) {
+      console.log(results);
+      res.send("Create User success !");
+    }
   );
-  res.send("Create User succeed !");
 };
 
 const getCreatePage = (req, res) => {
