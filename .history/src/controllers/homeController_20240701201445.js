@@ -6,12 +6,8 @@ const getHomePage = (req, res) => {
 const getHoiDanIt = (req, res) => {
   res.render("sample.ejs");
 };
-const postCreateUser = (req, res) => {
-  res.send("create a new user");
-};
 
 module.exports = {
   getHomePage,
   getHoiDanIt,
-  postCreateUser,
 };

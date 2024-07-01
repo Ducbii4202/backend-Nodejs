@@ -9,8 +9,9 @@ const port = process.env.PORT || 8081; //port => hardcode
 const hostname = process.env.HOST_NAME;
 
 //config req.body
-app.use(express.json()); //for json
-app.use(express.urlencoded({ extended: true })); //for form data
+app.use(express.json())
+app.use(express.urlencoded({ extended: true })
+
 
 // config template engine
 configViewEngine(app);
