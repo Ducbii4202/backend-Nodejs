@@ -17,7 +17,7 @@ const postCreateUser = (req, res) => {
     `  INSERT INTO
     Users (email, name, city)
    VALUES (?,?,?)`,
-    [email, name, city],
+    [(email, name, city)],
     function (results) {
       console.log(results);
       res.send("Create User success !");
