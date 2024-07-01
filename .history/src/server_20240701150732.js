@@ -26,6 +26,7 @@ const connection = mysql.createConnection({
 //simpe query
 connection.query("select * from Users u", function (err, result, fields) {
   console.log(">>>result=", result);
+  console.log(">>>fields=", fields);
 });
 
 app.listen(port, hostname, () => {

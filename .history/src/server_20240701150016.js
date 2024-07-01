@@ -15,17 +15,11 @@ configViewEngine(app);
 app.use("/", webRouter);
 
 //test connection
-//create the connection to database
-const connection = mysql.createConnection({
+const connection = mysqlcreateConnection({
   host: "localhost",
   port: 3307,
   user: "root",
-  password: "123456",
-  database: "hoidanit",
-});
-//simpe query
-connection.query("select * from Users u", function (err, result, fields) {
-  console.log(">>>result=", result);
+  database: "test",
 });
 
 app.listen(port, hostname, () => {
