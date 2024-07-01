@@ -2,7 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const configViewEngine = require("./config/viewEngine.js");
 const webRouter = require("./routes/web.js");
-const connection = require("./config/database.js");
+const connection = require("./config/connection.js");
 
 const app = express();
 const port = process.env.PORT || 8081; //port => hardcode
