@@ -1,8 +1,8 @@
 const connection = require("../config/database");
-const { getAllUsers } = require("../services/CRUDService");
+const { getAllUser } = require("../services/CRUDService");
 
 const getHomePage = async (req, res) => {
-  let results = await getAllUsers();
+  console.log(">>> rows", results);
   return res.render("home.ejs", { listUsers: results });
 };
 const getHoiDanIt = (req, res) => {

@@ -25,26 +25,27 @@
         <th>Actions</th>
       </tr>
 
-      <% listUsers.forEach(function(user) { %>
+      <% for (let i=0; i < listUsers.length; i++) { %>
         <tr>
           <td>
-            <%= user.id %>
+            <%= listUsers[i].id %>
           </td>
           <td>
-            <%= user.email %>
+            <%=listUsers[i].email %>
           </td>
           <td>
-            <%= user.name %>
+            <%=listUsers[i].name %>
           </td>
           <td>
-            <%= user.city %>
+            <%=listUsers[i].city %>
           </td>
           <td>
             <button>Edit</button>
             <button>Delete</button>
           </td>
         </tr>
-        <% }); %>
+        <% } %>
+
     </table>
   </div>
 
