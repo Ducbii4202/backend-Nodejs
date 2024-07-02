@@ -1,5 +1,5 @@
 const connection = require("../config/database");
-const { getAllUsers, getUserById } = require("../services/CRUDService");
+const { getAllUsers } = require("../services/CRUDService");
 
 const getHomePage = async (req, res) => {
   let results = await getAllUsers();
@@ -22,7 +22,7 @@ const getCreatePage = (req, res) => {
 };
 const getUpdatePage = async (req, res) => {
   const usesId = req.params.id;
-  let user = await getUserById(usesId);
+  let results = await getUserById();
   res.render("edit.ejs", { userEdit: user }); // x <- y  (Lay biến Y gán cho Biến X)
 };
 

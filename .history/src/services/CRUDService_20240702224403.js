@@ -6,7 +6,7 @@ const getAllUsers = async () => {
 const getUserById = async (userId) => {
   let [results, fields] = await connection.query(
     "select * from Users where id = ?",
-    [userId]
+    [useId]
   );
   let user = results && results.length > 0 ? results[0] : {};
   return user;

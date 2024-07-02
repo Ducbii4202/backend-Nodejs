@@ -14,6 +14,6 @@ router.get("/hoidanit", getHoiDanIt);
 
 router.get("/create", getCreatePage);
 router.post("/create-user", postCreateUser);
-router.get("/update/:id", getUpdatePage);
+router.get("/update", getUpdatePage);
 
 module.exports = router;
