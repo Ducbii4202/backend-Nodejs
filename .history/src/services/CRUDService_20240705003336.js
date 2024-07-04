@@ -30,6 +30,5 @@ const updateUserById = async (email, city, name, userId) => {
 module.exports = {
   getAllUsers,
   getUserById,
-  getCreateUser,
   updateUserById,
 };

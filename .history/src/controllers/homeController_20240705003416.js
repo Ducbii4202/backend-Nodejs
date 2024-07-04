@@ -2,7 +2,7 @@ const connection = require("../config/database");
 const {
   getAllUsers,
   getUserById,
-  CreateUser,
+  getCreateUser,
   updateUserById,
 } = require("../services/CRUDService");
 
@@ -15,9 +15,8 @@ const getHoiDanIt = (req, res) => {
 };
 const postCreateUser = async (req, res) => {
   let { email, name, city } = req.body;
-  await CreateUser(email, name, city);
-  // res.send("Create User succeed !");
-  res.redirect("/");
+  await getCreateUser(email, name, city);
+  res.send("Create User succeed !");
 };
 
 const getCreatePage = (req, res) => {
@@ -32,8 +31,7 @@ const getUpdatePage = async (req, res) => {
 const postUpdateUser = async (req, res) => {
   let { email, name, city, userId } = req.body;
   await updateUserById(email, city, name, userId);
-  // res.send("Update User succeed !");
-  res.redirect("/");
+  res.send("Update User succeed !");
 };
 
 module.exports = {
