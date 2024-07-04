@@ -22,7 +22,7 @@ router.post("/update-user", postUpdateUser);
 
 router.get("/update/:id", getUpdatePage);
 
-router.post("/delete-user/:id", postDeletePage);
+router.get("/delete-user/:id", postDeletePage);
 router.post("/delete-user", postHandleRemoveUser);
 
 module.exports = router;

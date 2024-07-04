@@ -4,7 +4,7 @@ const {
   getUserById,
   CreateUser,
   updateUserById,
-  // deleteUserById,
+  deleteUserById,
 } = require("../services/CRUDService");
 
 const getHomePage = async (req, res) => {
